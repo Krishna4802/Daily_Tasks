@@ -1,0 +1,25 @@
+* Using Python Load 1000 rows from API https://api.patentsview.org/patents/query?q={%22_and%22:[{%22_gte%22:{%22patent_date%22:%222007-04-10%22}},{%22inventor_last_name%22:%22Whitney%22}]}&f=[%22patent_title%22,%22patent_number%22,%22patent_date%22,%22inventor_last_name%22]&_gl=1*1921iv2*_ga*MTA4MTg0OTMyNi4xNjg5ODQxNjU0*_ga_K4PTTLH074*MTY5MDI5MDk0OS4zLjEuMTY5MDI5MDk3Ny4zMi4wLjA. to table in json column
+* Using SQL Create a rn column in table and set the value to serial [Use alter command]
+* create a db function which will take min_id and max_id as input and return the data from table in json rows
+    * get_patent_data(p_min_id, p_max_id)
+         output format :
+              json1
+              json2
+
+* Create a Python Code
+        * infinite while loop
+        * using random value increment max_id and fetch values from get_patent_data
+        * Load the data to Kafka Topic
+            * Create two consumers with duplicate 
+               1.SOLR
+                  index the data to solr
+                      patent_title
+                      patent_number
+                      patent_date
+                      inventor_names as list
+                2.Elastic
+                    index the data to es
+                      patent_title
+                      patent_number
+                      patent_date
+                      inventor_names as list
