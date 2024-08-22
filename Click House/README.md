@@ -95,14 +95,14 @@
 
 # Queries to see the materialized table : 
 
-              1)    SELECT * from  patents_word_count_mv;
+      1)    SELECT * from  patents_word_count_mv;
 
-              2)    SELECT word_count, count(*) AS patent_count
-                    FROM patents_word_count_mv
-                         GROUP BY word_count
-                         ORDER BY word_count;
+      2)    SELECT word_count, count(*) AS patent_count
+            FROM patents_word_count_mv
+                 GROUP BY word_count
+                 ORDER BY word_count;
 
-              3)    SELECT Patent_number, Patent_name, word_count
-                    FROM patents_word_count_mv2;
-                    
-              4)   SELECT * FROM patents_word_count_mv_2;
+      3)    SELECT Patent_number, Patent_name, word_count
+            FROM patents_word_count_mv2;
+            
+      4)   SELECT * FROM patents_word_count_mv_2;
