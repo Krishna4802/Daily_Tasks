@@ -18,3 +18,12 @@ In Docker terminal
     To run notebook in browser : jupyter-notebook --allow-root --ip=0.0.0.0
     To code in python : nano hello.py  within that type as print(“Hello World”); then save the file
     To execute the python : python3 hello.py
+
+
+
+## Docker installing in ubuntu 
+
+    sudo apt install docker.io
+    sudo apt install docker-compose
+    docker --version
+    docker-compose --version
